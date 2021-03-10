@@ -1,0 +1,71 @@
+/* svg{
+    #border: thin solid gray;
+} */
+/* logos style */
+svg.label{
+    overflow: visible
+ }
+ image.logo{
+    fill: white;
+ }
+
+/* end of logo style */
+
+text{
+   font-size: 14px;
+   font-family: Open Sans, sans-serif;
+   color: white;
+}
+ text.title{
+    font-size: 24px;
+    font-weight: 700;
+    fill: white;  
+ }
+ text.subTitle{
+    font-size: 10px;
+    font-weight: 500;
+    fill: whitesmoke;
+ }
+ text.caption{
+    font-weight: 400;
+    font-size: 14px;
+    fill: #777777;
+ }
+ text.label{
+    font-weight: 600; /* 550 */
+    text-anchor: end;  /* logo style */
+ }
+
+ text.valueLabel{
+    color: white;
+    font-weight: 300;
+    fill: white;  
+ }
+
+ text.yearText{
+    font-size: 64px;
+    font-weight: 700;
+    opacity: 0.75;
+    color: white;
+    fill: white;  
+ }
+ .tick text {
+    fill: #777777;
+    color: white;
+    opacity: 0.75;
+    fill: white; 
+ }
+ .xAxis .tick:nth-child(2) text {
+    text-anchor: start;
+ }
+ .tick line {
+    shape-rendering: CrispEdges;
+    stroke: #dddddd;
+ }
+ .tick line.origin{
+    stroke: #aaaaaa;
+ }
+ path.domain{
+    opacity: 0; /* another option to hide */
+    /* display: none; */
+ }
