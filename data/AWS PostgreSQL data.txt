@@ -1,3 +1,9 @@
 Esnpoint: banking.cephpaqhv83w.us-east-2.rds.amazonaws.com
 User: postgres
 Pass: 2gZq7GdZ7Nw8iuAoRufq
+
+
+SELECT * 
+FROM data_clean
+WHERE cve_institucion IN (SELECT bank_id FROM banks)
+AND cve_concepto IN ( SELECT CAST (cve_concepto AS TEXT ) FROM conceptos );
