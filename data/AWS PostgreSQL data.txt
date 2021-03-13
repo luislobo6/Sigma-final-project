@@ -1,0 +1,3 @@
+Esnpoint: banking.cephpaqhv83w.us-east-2.rds.amazonaws.com
+User: postgres
+Pass: 2gZq7GdZ7Nw8iuAoRufq
