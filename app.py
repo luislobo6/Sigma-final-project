@@ -20,7 +20,7 @@ def index():
     # return the GeoJSON object
     return render_template("index.html")
 
-# In this URL you can get specific information regarding one bank_concept, example to try: /21_100000000000
+# In this URL you can get specific information regarding one bank_concept, example to try: /model/21_100000000000
 @app.route("/model/<bank_concept>")
 def models(bank_concept):
     
@@ -36,9 +36,6 @@ def models(bank_concept):
     FROM data_filtered_bank
     WHERE cve_institucion = CAST ({bank} AS TEXT )
     AND cve_concepto = {concept};""",engine)
-
-    # close connection
-    engine.drop
 
     #### Generate the complete prophet prediction with the data ####
     # First we get the values needed from the dataframe
@@ -57,7 +54,7 @@ def models(bank_concept):
     forecast = m.predict(future)
 
     # write it as a json object and return it
-    return json.dump(model_to_json(m))
+    return json.dumps(model_to_json(m))
 
 # In this URL you can get specific information regarding one bank_concept, example to try: /21_100000000000
 @app.route("/<bank_concept>")
