@@ -4,9 +4,9 @@ import pandas as pd
 from sqlalchemy import create_engine
 import json
 from config import CONN
-#from fbprophet import Prophet
-#from fbprophet.plot import plot_plotly, plot_components_plotly
-#from fbprophet.serialize import model_to_json, model_from_json
+from fbprophet import Prophet
+from fbprophet.serialize import model_to_json, model_from_json
+# from fbprophet.plot import plot_plotly, plot_components_plotly
 
 
 
@@ -76,9 +76,6 @@ def information(bank_concept):
     WHERE cve_institucion = CAST ({bank} AS TEXT )
     AND cve_concepto = {concept};""",engine)
 
-    # close connection
-    # engine.drop
-
     # write it as a json object and return it
     return json.dumps(test.to_json())
 
@@ -103,7 +100,7 @@ def information_more(bank_concept):
     query_final = f"{query1}{query2}"
     params_final = banks + concepts
 
-    print("*************************",query_final, params_final,"****************************")
+    # print("*************************",query_final, params_final,"****************************")
 
     test = pd.read_sql(query_final,engine, params=[params_final])
 
