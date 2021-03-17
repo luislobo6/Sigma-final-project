@@ -74,7 +74,7 @@ svg.append('text')
 svg.append('text')
    .attr('class', 'subTitle')
    .attr('y', 40)
-   .html('Miles de Millones de Ps');
+   .html('Billions Ps');
 
 let year = yearStart;
 

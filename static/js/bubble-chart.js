@@ -32,7 +32,7 @@ svg.append('text')
 svg.append('text')
   .attr('class', 'subTitle')
   .attr('y', 40)
-  .html('Miles de Millones de Ps');
+  .html('Billions Ps');
 
 // Append a group to the SVG area and shift it to the right and bottom
 var chartGroup = svg.append("g")

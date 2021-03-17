@@ -29,6 +29,13 @@
     <link rel="stylesheet" href="./static/css/bubbleChartStyle.css">
     <link rel="stylesheet" href="./static/css/ChartRaceStyle.css">
 
+    <!-- jquery & bootstrap.min.js & datatbles.net -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <!-- datatables.net CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
 </head>
 <body>
 <header>
@@ -50,6 +57,7 @@
 
             <li class="drpdown"><a href="#"><i class="fa fa-industry"></i><span>Benchmark</span></a>
               <ul class="drpcontent">
+                <li><a href="#" id="historical-benchmark">Historical Analysis</a></li>
                 <li><a href="#" id="chart-bubble-chart">Bubblechart</a></li>
                 <li><a href="#" id="chart-race-click">Chart Race</a></li>
               </ul>
@@ -62,21 +70,15 @@
               </ul>
             </li>
                  
-            <li class="drpdown"><a href="#"><i class="fa fa-money fa-lg"></i><span>Funding</span></a>
+            
+            <li><a href="#"><i class="fa fa-money fa-lg"></i><span id="results">Results</span></a></li>
+            <!-- <li class="drpdown"><a href="#"><i class="fa fa-money fa-lg"></i><span>Funding</span></a>
               <ul class="drpcontent">
                 <li><a href="#" id="funding-analysis">Historical Analysis</a></li>
                 <li><a href="#" id="funding-projections">Projections</a></li>
               </ul>
-            </li>
-           
-            <!-- <li class="drpdown"><a href="#"><i class="fa fa-line-chart"></i><span>Projections</span></a>
-              <ul class="drpcontent">
-                <li><a href="#" data-color="color1">Xxxxxx</a></li>
-                <li><a href="#" data-color="color2">Yyyyyy</a></li>
-                <li><a href="#" data-color="color3">Zzzzzz</a></li>
-              </ul>
             </li> -->
-
+                       
             <li><a href="#"><i class="fa fa-list"></i><span id="click-Conclusions">Conclusions</span></a></li>
           </ul> <!-- End ul "navbarmenu color1" -->
         </div> <!-- col-xs-8 col-sm-6" -->
@@ -102,6 +104,7 @@
 <script src="./static/js/logic.js"></script>
 <script src="./static/js/chart-race.js"></script>
 <script src="./static/js/bubble-chart.js"></script>
+
 
 <footer >
   <nav class="navbar fixed-bottom navbar-dark bg-dark p-2" style="color: white">Bootcamp March 2021</nav>

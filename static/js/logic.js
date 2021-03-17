@@ -64,11 +64,11 @@ function ploteo(dropdownMenu){
     var data = [trace1,trace2, trace3, trace4];
     
     var layout = {
-        title: `${dropdownMenu} Portfolio Projection with Prophet`,
+        title: `${dropdownMenu} Projection with Prophet (Billion Ps)`,
         autosize: false,
         width: 1000,
         height: 540,
-        // paper_bgcolor: '#7f7f7f',//'#c7c7c7',
+        // paper_bgcolor: 'LightSteelBlue',
         // plot_bgcolor: '#7f7f7f',
         xaxis: {
           autorange: true,
@@ -105,12 +105,75 @@ function ploteo(dropdownMenu){
 
 //////////*** CODE FOR HOME MENU ***//////////
 
+
 var clickHome = d3.select('#click-Home');
 clickHome.on("click", function(){
 
 // to clear space in html   
 d3.select("#myDiv").html("");
-console.log("Hiya");
+
+//Adding AJAX table
+d3.select("#myDiv").append("h1").text("Mexico Banking Industry Data")
+d3.select("#myDiv").append("hr")
+//Creating Table
+d3.select("#myDiv").append("table").attr("class","display").attr("id","mytable").attr("width","100%")
+let head_table= d3.select("#mytable").append("thead").attr("width","100%")
+head_table.append("th").text("Index")
+head_table.append("th").text("Institution")
+head_table.append("th").text("Concept")
+head_table.append("th").text("Date")
+head_table.append("th").text("Value")
+//Creating table with AJAX
+$(document).ready(function(){
+  $('#mytable').DataTable({
+    "ajax":{
+      url:"data/data_fitered_bank.csv",
+      dataSrc:"data"
+    },
+    columns:[
+      {data:"index"},
+      {data:"cve_institucion"},
+      {data:"cve_concepto"},
+      {data:"time"},
+      {data:"value"}
+    ],
+    "paging":true,
+    "ordering":true,
+    "info":true
+  })
+})
+
+
+});//end of event listener .on "click"
+
+
+//////////*** CODE FOR TABLEAU BENCHMARK HISTORICAL ANALYSIS MENU ***//////////
+
+var clickBenchmark = d3.select('#historical-benchmark');
+clickBenchmark.on("click", function(){
+
+// to clear space in html   
+d3.select("#myDiv").html("");
+
+d3.select("#myDiv").append("iframe")
+.attr("src", "https://public.tableau.com/views/Market_Share_Mex_2020/MarketShare?:language=es&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true")
+.attr("width","1080").attr("height", "520")
+
+});//end of event listener .on "click"
+
+
+
+//////////*** CODE FOR TABLEAU PORTFOLIO MENU ***//////////
+
+var clickPortAnalysis = d3.select('#portfolio-analysis');
+clickPortAnalysis.on("click", function(){
+
+// to clear space in html   
+d3.select("#myDiv").html("");
+
+d3.select("#myDiv").append("iframe")
+.attr("src", "https://public.tableau.com/views/Bank_Lending_Mexico/Story1?:language=es&:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true")
+.attr("width","1080").attr("height", "520")
 
 });//end of event listener .on "click"
 
@@ -127,12 +190,18 @@ d3.select("#myDiv").append("select").attr("id", "selDataset")
 
 d3.select("#selDataset").append("option").attr("id", "Total_Portfolio")
 .text("Total_Portfolio")
-d3.select("#selDataset").append("option").attr("id", "Commercial")
-.text("Commercial") 
-d3.select("#selDataset").append("option").attr("id", "Retail")
-.text("Retail") 
-d3.select("#selDataset").append("option").attr("id", "Mortgage")
-.text("Mortgage")
+d3.select("#selDataset").append("option").attr("id", "Commercial_Portfolio")
+.text("Commercial_Portfolio") 
+d3.select("#selDataset").append("option").attr("id", "Retail_Portfolio")
+.text("Retail_Portfolio") 
+d3.select("#selDataset").append("option").attr("id", "Mortgage_Portfolio")
+.text("Mortgage_Portfolio")
+d3.select("#selDataset").append("option").attr("id", "Total_Liabilities")
+.text("Total_Liabilities")
+d3.select("#selDataset").append("option").attr("id", "Bank_Deposits")
+.text("Bank_Deposits") 
+d3.select("#selDataset").append("option").attr("id", "Time_Deposits")
+.text("Time_Deposits")
 
 ploteo("Total_Portfolio")
 
@@ -144,33 +213,20 @@ d3.select('#selDataset').on("change", function(){
 
 });//end of event listener .on "click"
 
-//////////*** CODE FOR FUNDING PROJECTIONS MENU ***//////////
+//////////*** CODE FOR TABLEAU FINANCIAL RESULTS MENU ***//////////
 
-var clickFundingProjections = d3.select('#funding-projections');
-clickFundingProjections.on("click", function(){
+var clickResults = d3.select('#results');
+clickResults.on("click", function(){
 
 // to clear space in html   
 d3.select("#myDiv").html("");
 
-// To create the select item
-d3.select("#myDiv").append("select").attr("id", "selDataset")
-
-d3.select("#selDataset").append("option").attr("id", "Total_Liabilities")
-.text("Total_Liabilities")
-d3.select("#selDataset").append("option").attr("id", "Bank_Deposits")
-.text("Bank_Deposits") 
-d3.select("#selDataset").append("option").attr("id", "Time_Deposits")
-.text("Time_Deposits")
-
-ploteo("Total_Liabilities")
-
-d3.select('#selDataset').on("change", function(){
-    var dropdownMenu = d3.select("#selDataset").node().value;
-    console.log(dropdownMenu)
-    ploteo(dropdownMenu) 
-});
+d3.select("#myDiv").append("iframe")
+.attr("src", "https://public.tableau.com/shared/5QDW5DP8P?:display_count=y&:origin=viz_share_link:showVizHome=no&:embed=true")
+.attr("width","1080").attr("height", "520")
 
 });//end of event listener .on "click"
+
 
 //////////*** CODE FOR CONCLUSIONS ***//////////
 
