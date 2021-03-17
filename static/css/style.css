@@ -1,72 +1,81 @@
-body{
-    background-image: url("../images/banks-image1.jpg");
-    background-repeat:no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    position: relative;
-}
+/* body{ */
+    /*     background-image: linear-gradient(to bottom right, white, gray);*/
+        /* background-repeat:no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        position: relative; */
+    /* } */
 
-.navbar-inline {
-    min-height: 60px;
-}
-
-.navbar-brand {
-    margin:5px;
-    position:absolute;
-}
-
-footer{
+    body::before{
+        content: "";
+        background-image: url("../images/banks-image1.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.25;
+    }
+    .navbar-inline {
+        min-height: 60px;
+    }
+    .navbar-brand {
+        margin:5px;
+        position:absolute;
+    }
+    footer{
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    .bg__card__navbar{
+        background-color: #000000;
+    }
+    .bg__card__footer{
+        background-color: #000000 !important;
+    }
+    #add__new__list{
+        top: -38px;
+        right: 0px;
+    }
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+    }
+    /* Bottom right text */
+    .text-block {
+        position: relative; 
+        /* static; relative; fixed; absolute; sticky */
+        /* bottom: 40%; */
+        /* 10px; */
+        /* left: 10%;  */
+        /* 300px; */
+        display: flex; 
+        /* block; */
+        /* overflow: hidden; */
+        height: 100%; 
+        /* 100%;  */
+        /* 530px; */
+        width: 100%;
+        /* 800px; */
+        /* background-color: rgb(75, 73, 73); */
+        opacity: 1;
+        color:black;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .list-group { 
+        margin: 0; 
+        min-width: 1000px;
+        width: 100%;
+        min-height: 520px;
+        height: 100%;
+     }
+     .odd{
+         color: black;
+     }
+     .even{
+         color: black;
+     }
     
-	margin-top: 20px;
-	padding-top: 20px;
-}
-.bg__card__navbar{
-	background-color: #000000;
-}
-.bg__card__footer{
-	background-color: #000000 !important;
-}
-#add__new__list{
-    top: -38px;
-    right: 0px;
-}
-
-/* Container holding the image and the text */
-.container {
-    position: relative;
-}
-
-/* Bottom right text */
-.text-block {
-    position: relative; 
-    /* static; relative; fixed; absolute; sticky */
     
-    /* bottom: 40%; */
-    /* 10px; */
-    /* left: 10%;  */
-    /* 300px; */
-    
-    display: flex; 
-    /* block; */
-    /* overflow: hidden; */
-
-    height: 100%; 
-    /* 100%;  */
-    /* 530px; */
-    width: 100%;
-    /* 800px; */
-    background-color: rgb(75, 73, 73);
-    opacity: 0.9;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.list-group { 
-    margin: 0; 
-    min-width: 1000px;
-    width: 100%;
-    min-height: 520px;
-    height: 100%;
- }
-

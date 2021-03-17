@@ -105,47 +105,39 @@ function ploteo(dropdownMenu){
 
 //////////*** CODE FOR HOME MENU ***//////////
 
-
 var clickHome = d3.select('#click-Home');
 clickHome.on("click", function(){
-
 // to clear space in html   
-d3.select("#myDiv").html("");
-
+  d3.select("#myDiv").html("");
 //Adding AJAX table
-d3.select("#myDiv").append("h1").text("Mexico Banking Industry Data")
-d3.select("#myDiv").append("hr")
-//Creating Table
-d3.select("#myDiv").append("table").attr("class","display").attr("id","mytable").attr("width","100%")
-let head_table= d3.select("#mytable").append("thead").attr("width","100%")
-head_table.append("th").text("Index")
-head_table.append("th").text("Institution")
-head_table.append("th").text("Concept")
-head_table.append("th").text("Date")
-head_table.append("th").text("Value")
-//Creating table with AJAX
-$(document).ready(function(){
-  $('#mytable').DataTable({
-    "ajax":{
-      url:"data/data_fitered_bank.csv",
-      dataSrc:"data"
-    },
-    columns:[
-      {data:"index"},
-      {data:"cve_institucion"},
-      {data:"cve_concepto"},
-      {data:"time"},
-      {data:"value"}
-    ],
-    "paging":true,
-    "ordering":true,
-    "info":true
+  d3.select("#myDiv").append("h3").text("Mexico Banking Industry Data")
+  d3.select("#myDiv").append("hr")
+  //Creating Table
+  d3.select("#myDiv").append("table").attr("class","display").attr("id","mytable").attr("width","100%")
+  let head_table= d3.select("#mytable").append("thead").attr("width","100%").append("tr")
+  head_table.append("th").text("Bank")
+  head_table.append("th").text("Account")
+  head_table.append("th").text("Date")
+  head_table.append("th").text("Value")
+  //Creating table with AJAX
+  $(document).ready(function(){
+    $('#mytable').DataTable({
+      "ajax":{
+        url:"static/data/table_data.json"
+      },
+      columns:[
+        {data:"Bank"},
+        {data:"Account Name"},
+        {data:"Time"},
+        {data:"Value"}
+      ],
+      "paging":true,
+      "ordering":true,
+      "info":true
+    })
   })
-})
-
-
+console.log("Hiya");
 });//end of event listener .on "click"
-
 
 //////////*** CODE FOR TABLEAU BENCHMARK HISTORICAL ANALYSIS MENU ***//////////
 

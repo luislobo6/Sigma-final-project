@@ -11,8 +11,8 @@ const top_n = 10;
 const height = 520;
 const width = 1230;
 
-const tickDuration  = 3000; //delay of an animation
-const delayDuration = 4500; 
+const tickDuration  = 2000; //delay of an animation
+const delayDuration = 3500; 
 const yearStart     = 2009;
 const yearEnd       = 2020;
 
@@ -20,7 +20,8 @@ const title = `Top Mexican Banks with Highest Portfolio Value (${yearStart}-${ye
 
 const svg = d3.select("#myDiv").append("svg")
    .attr("width", width)
-   .attr("height", height);
+   .attr("height", height)
+   .style("background-color", "grey");
 
 const margin = {
    top: 80,

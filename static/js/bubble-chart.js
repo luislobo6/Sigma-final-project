@@ -22,7 +22,8 @@ var svg = d3
   .select("#myDiv")
   .append("svg")
   .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  .attr("height", svgHeight)
+  .style("background-color", "grey");
 
 svg.append('text')
   .attr('class', 'title')
