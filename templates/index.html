@@ -7,12 +7,16 @@
     <title>Final Project Team Sigma</title>
     
     <!------ Jquery ***Remember jquery must be first***---------->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <!------ Bootstrap CSS & JS ---------->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- D3.js -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- d3.js script -->
@@ -23,11 +27,6 @@
 
     <!-- iconography  i.e. <i class="fa fa-list-ol fa-5x"></i>-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- For Reveal JS -->
-    <link rel="stylesheet" href="{{ url_for('static',filename='dist/reset.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static',filename='dist/reveal.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static',filename='dist/theme/black.css') }}" id="theme">
 
     <!-- jquery & bootstrap.min.js & datatbles.net -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -101,8 +100,31 @@
     <div class="container">
       <div class="row">
         <div id="myDiv">
-          
-        </div>
+          <div class="jumbotron">
+            <h1 class="display-4">Mexico Banking Industry</h1><br><br>
+            <p class="lead">
+              Welcome to the Mexican Banking industry dashboard. We hope to give you a brief recap of how the industry has evolved throughout the years and see the impacts of the latest macroeconomic conditions on the sector finalizing with a projection of what to expect. 
+            </p><br>
+            <p class="lead">
+              Mexico has one of the most developed banking system, more than 60% of banking assets belong to international banks where spaniards BBVA and Santander lead the industry along with Citibanamex and local mexico bank Banorte. 
+            </p><br>
+            <p class="lead">
+              For easiness we have created a menu in which you can select the visualization you want to cover, from benchmark performance, portfolio historic and projected trends and 4Q financial results on the four main banks.
+            </p><br>
+            <p class="lead">
+              For projections we used the newly developed Facebook Prophet application, that help us create a time series analysis model that we trained with data until 2018. We tested with 2019 and 2020 and reviewed projections for 2021 onwards.
+            </p><br>
+            <p class="lead">
+              We expect to have provided enough insight on the Mexican Banking System, for final overview please read our conclusions.
+            </p><br><br>
+            <p class="lead">
+              Regards,
+            </p><br>
+            <p class="lead">
+              SIGMA Consulting
+            </p>
+          </div>
+        </div> <!-- end of myDiv -->
       </div> <!-- end of row -->
     </div> <!--end of container-->
   </div>  <!-- end of text block--->
@@ -113,11 +135,6 @@
 <script src="{{ url_for('static',filename='js/logic.js') }}"></script>
 <script src="{{ url_for('static',filename='js/chart-race.js') }}"></script>
 <script src="{{ url_for('static',filename='js/bubble-chart.js') }}"></script>
-  <!-- From the Reveal JS library -->
-  <script src="{{ url_for('static',filename='dist/reveal.js') }}"></script>
-  <script src="{{ url_for('static',filename='plugin/notes/notes.js') }}"></script>
-  <script src="{{ url_for('static',filename='plugin/markdown/markdown.js') }}"></script>
-  <script src="{{ url_for('static',filename='plugin/highlight/highlight.js') }}"></script>
 
 <footer >
   <nav class="navbar fixed-bottom navbar-dark bg-dark p-2" style="color: white">Bootcamp March 2021</nav>
