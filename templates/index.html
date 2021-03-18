@@ -10,81 +10,89 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <!------ Bootstrap CSS & JS ---------->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
   <!-- D3.js -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- d3.js script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <!-- plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <!-- iconography  i.e. <i class="fa fa-list-ol fa-5x"></i>-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- For Reveal JS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='dist/reset.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='dist/reveal.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='dist/theme/black.css') }}" id="theme">
+
+    <!-- jquery & bootstrap.min.js & datatbles.net -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <!-- datatables.net CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+
     <!-- Custom styles for this template  / Includes map.css for Leaflet-->
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="./static/css/menuStyle.css">
-    <link rel="stylesheet" href="./static/css/bubbleChartStyle.css">
-    <link rel="stylesheet" href="./static/css/ChartRaceStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/menuStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bubbleChartStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ChartRaceStyle.css') }}">
 
 </head>
 <body>
-<header>
-  <nav class="navbar-inline navbar-dark bg-dark" > 
-    <div class="container-fluid">
-      <div class="row">
+  <header>
+    <nav class="navbar-inline navbar-dark bg-dark" > 
+      <div class="container-fluid">
+        <div class="row">
+        
+          <div class="col-xs-8 col-sm-6">
+            <a class="navbar-brand " href="#">
+              <img src="{{ url_for('static',filename='images/Sigma.png') }}" width="40" height="30" alt="Sigma Team">  
+                Team Sigma     
+                <span> | Banking Industry In México</span>
+            </a>
+          </div> <!--End of col-xs-8 col-sm-6-->
       
-        <div class="col-xs-8 col-sm-6">
-          <a class="navbar-brand " href="#">
-            <img src="./static/images/Sigma.png" width="40" height="30" alt="Sigma Team">  
-              Team Sigma     
-              <span> | Banking Industry In México</span>
-          </a>
-        </div> <!--End of col-xs-8 col-sm-6-->
-    
-        <div class="col-xs-8 col-sm-6">
-          <ul class="navbarmenu color1">
-            <li><a href="#"><i class="fa fa-home fa-lg"></i><span id="click-Home">Home</span></a></li>
-
-            <li class="drpdown"><a href="#"><i class="fa fa-industry"></i><span>Benchmark</span></a>
-              <ul class="drpcontent">
-                <li><a href="#" id="chart-bubble-chart">Bubblechart</a></li>
-                <li><a href="#" id="chart-race-click">Chart Race</a></li>
-              </ul>
-            </li>
-
-            <li class="drpdown"><a href="#"><i class="fa fa-cc-visa"></i><span>Portfolio</span></a>
-              <ul class="drpcontent">
-                <li><a href="#" id="portfolio-analysis">Historical Analysis</a></li>
-                <li><a href="#" id="portfolio-projections">Projections</a></li>
-              </ul>
-            </li>
-                 
-            <li class="drpdown"><a href="#"><i class="fa fa-money fa-lg"></i><span>Funding</span></a>
-              <ul class="drpcontent">
-                <li><a href="#" id="funding-analysis">Historical Analysis</a></li>
-                <li><a href="#" id="funding-projections">Projections</a></li>
-              </ul>
-            </li>
-           
-            <!-- <li class="drpdown"><a href="#"><i class="fa fa-line-chart"></i><span>Projections</span></a>
-              <ul class="drpcontent">
-                <li><a href="#" data-color="color1">Xxxxxx</a></li>
-                <li><a href="#" data-color="color2">Yyyyyy</a></li>
-                <li><a href="#" data-color="color3">Zzzzzz</a></li>
-              </ul>
-            </li> -->
-
-            <li><a href="#"><i class="fa fa-list"></i><span id="click-Conclusions">Conclusions</span></a></li>
-          </ul> <!-- End ul "navbarmenu color1" -->
-        </div> <!-- col-xs-8 col-sm-6" -->
-
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->  
-  </nav>
-</header>
+          <div class="col-xs-8 col-sm-6">
+            <ul class="navbarmenu color1">
+              <li><a href="#"><i class="fa fa-home fa-lg"></i><span id="click-Home">Home</span></a></li>
+  
+              <li class="drpdown"><a href="#"><i class="fa fa-industry"></i><span>Benchmark</span></a>
+                <ul class="drpcontent">
+                  <li><a href="#" id="historical-benchmark">Historical Analysis</a></li>
+                  <li><a href="#" id="chart-bubble-chart">Bubblechart</a></li>
+                  <li><a href="#" id="chart-race-click">Chart Race</a></li>
+                </ul>
+              </li>
+  
+              <li class="drpdown"><a href="#"><i class="fa fa-cc-visa"></i><span>Portfolio</span></a>
+                <ul class="drpcontent">
+                  <li><a href="#" id="portfolio-analysis">Historical Analysis</a></li>
+                  <li><a href="#" id="portfolio-projections">Projections</a></li>
+                </ul>
+              </li>
+                   
+              
+              <li><a href="#"><i class="fa fa-money fa-lg"></i><span id="results">Results</span></a></li>
+              <!-- <li class="drpdown"><a href="#"><i class="fa fa-money fa-lg"></i><span>Funding</span></a>
+                <ul class="drpcontent">
+                  <li><a href="#" id="funding-analysis">Historical Analysis</a></li>
+                  <li><a href="#" id="funding-projections">Projections</a></li>
+                </ul>
+              </li> -->
+                         
+              <li><a href="/conclusions" target="_blank"><i class="fa fa-list"></i><span id="click-Conclusions">Conclusions</span></a></li>
+            </ul> <!-- End ul "navbarmenu color1" -->
+          </div> <!-- col-xs-8 col-sm-6" -->
+  
+        </div> <!-- end of row -->
+      </div> <!-- end of container -->  
+    </nav>
+  </header>
 
 <!--main body starts here-->
 <main>
@@ -92,16 +100,24 @@
   <div class="text-block">
     <div class="container">
       <div class="row">
-        <div id="myDiv"></div>
+        <div id="myDiv">
+          
+        </div>
       </div> <!-- end of row -->
     </div> <!--end of container-->
   </div>  <!-- end of text block--->
     
 </main>
 
-<script src="./static/js/logic.js"></script>
-<script src="./static/js/chart-race.js"></script>
-<script src="./static/js/bubble-chart.js"></script>
+
+<script src="{{ url_for('static',filename='js/logic.js') }}"></script>
+<script src="{{ url_for('static',filename='js/chart-race.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bubble-chart.js') }}"></script>
+  <!-- From the Reveal JS library -->
+  <script src="{{ url_for('static',filename='dist/reveal.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/notes/notes.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/markdown/markdown.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/highlight/highlight.js') }}"></script>
 
 <footer >
   <nav class="navbar fixed-bottom navbar-dark bg-dark p-2" style="color: white">Bootcamp March 2021</nav>

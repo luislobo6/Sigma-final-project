@@ -119,11 +119,12 @@ clickHome.on("click", function(){
   head_table.append("th").text("Account")
   head_table.append("th").text("Date")
   head_table.append("th").text("Value")
+  
   //Creating table with AJAX
   $(document).ready(function(){
     $('#mytable').DataTable({
       "ajax":{
-        url:"static/data/table_data.json"
+        url:'static/data/table_data.json'
       },
       columns:[
         {data:"Bank"},
@@ -225,59 +226,59 @@ d3.select("#myDiv").append("iframe")
 var clickConclusions = d3.select('#click-Conclusions');
 clickConclusions.on("click", function(){
     function init() {
-        // to clear space in html 
-        d3.select("#myDiv").html("");
-        // To create the header
-        d3.select("#myDiv").append("h1").text("Conclusions") 
-        d3.select("#myDiv").append("hr")
-        // Creating a div class "list-group"
-        d3.select("#myDiv").append("div").attr("class", "list-group")
+        // // to clear space in html 
+        // d3.select("#myDiv").html("");
+        // // To create the header
+        // d3.select("#myDiv").append("h1").text("Conclusions") 
+        // d3.select("#myDiv").append("hr")
+        // // Creating a div class "list-group"
+        // d3.select("#myDiv").append("div").attr("class", "list-group")
         
-        // To create a list of buttons class "list-group-item list-group-item-action"
-        d3.select("div.list-group").append("button").attr("id", "one").attr("class", "list-group-item list-group-item-action").text(" ( 1 ) ")
-        d3.select("div.list-group").append("button").attr("id", "two").attr("class", "list-group-item list-group-item-action").text(" ( 2 ) ")
-        d3.select("div.list-group").append("button").attr("id", "three").attr("class", "list-group-item list-group-item-action").text(" ( 3 ) ")
-        d3.select("div.list-group").append("button").attr("id", "four").attr("class", "list-group-item list-group-item-action").text(" ( 4 ) ")
-        d3.select("div.list-group").append("button").attr("id", "five").attr("class", "list-group-item list-group-item-action").text(" ( 5 ) ")
+        // // To create a list of buttons class "list-group-item list-group-item-action"
+        // d3.select("div.list-group").append("button").attr("id", "one").attr("class", "list-group-item list-group-item-action").text(" ( 1 ) ")
+        // d3.select("div.list-group").append("button").attr("id", "two").attr("class", "list-group-item list-group-item-action").text(" ( 2 ) ")
+        // d3.select("div.list-group").append("button").attr("id", "three").attr("class", "list-group-item list-group-item-action").text(" ( 3 ) ")
+        // d3.select("div.list-group").append("button").attr("id", "four").attr("class", "list-group-item list-group-item-action").text(" ( 4 ) ")
+        // d3.select("div.list-group").append("button").attr("id", "five").attr("class", "list-group-item list-group-item-action").text(" ( 5 ) ")
           
-        };  
+        // };  
       
-        init()
+        // init()
       
-        // Take Away #1
-        d3.select("#one").on("click", function(){
-          d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
-          d3.select("#one").text(" ( 1 ) Sonora is by far the greatest producer of Gold and Copper")
-            .attr("class", "list-group-item list-group-item-action active")
-        });
+        // // Take Away #1
+        // d3.select("#one").on("click", function(){
+        //   d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
+        //   d3.select("#one").text(" ( 1 ) Sonora is by far the greatest producer of Gold and Copper")
+        //     .attr("class", "list-group-item list-group-item-action active")
+        // });
       
-        // Take Away #2
-        d3.select("#two").on("click", function(){
-          d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
-          d3.select("#two").text(" ( 2 ) Zacatecas is the larger producer of Silver followed by Chihuahua and Durango")
-          .attr("class", "list-group-item list-group-item-action active")
-        })
+        // // Take Away #2
+        // d3.select("#two").on("click", function(){
+        //   d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
+        //   d3.select("#two").text(" ( 2 ) Zacatecas is the larger producer of Silver followed by Chihuahua and Durango")
+        //   .attr("class", "list-group-item list-group-item-action active")
+        // })
       
-        // Take Away #3
-        d3.select("#three").on("click", function(){
-          d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
-          d3.select("#three").text(" ( 3 ) Only a few states in Mexico are dedicated to the Mining Industry")
-          .attr("class", "list-group-item list-group-item-action active")
-        })
+        // // Take Away #3
+        // d3.select("#three").on("click", function(){
+        //   d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
+        //   d3.select("#three").text(" ( 3 ) Only a few states in Mexico are dedicated to the Mining Industry")
+        //   .attr("class", "list-group-item list-group-item-action active")
+        // })
       
-        // Take Away #4
-        d3.select("#four").on("click", function(){
-          d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
-          d3.select("#four").text(" ( 4 ) INEGI data can seem confusing but it is very well organized in comparisson with other governmental bodies")
-          .attr("class", "list-group-item list-group-item-action active")
-        })
+        // // Take Away #4
+        // d3.select("#four").on("click", function(){
+        //   d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
+        //   d3.select("#four").text(" ( 4 ) INEGI data can seem confusing but it is very well organized in comparisson with other governmental bodies")
+        //   .attr("class", "list-group-item list-group-item-action active")
+        // })
       
-        // Take Away #5
-        d3.select("#five").on("click", function(){
-          d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
-          d3.select("#five").text(" ( 5 ) The hardest part of the project was to connect the back and the front end")
-          .attr("class", "list-group-item list-group-item-action active")
-        })
+        // // Take Away #5
+        // d3.select("#five").on("click", function(){
+        //   d3.selectAll("button").attr("class", "list-group-item list-group-item-action")
+        //   d3.select("#five").text(" ( 5 ) The hardest part of the project was to connect the back and the front end")
+        //   .attr("class", "list-group-item list-group-item-action active")
+        // })
       
 
 });//end of event listener .on "click"

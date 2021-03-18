@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Team Sigma</title>
+    
+    <!------ Jquery ***Remember jquery must be first***---------->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    
+    <!------ Bootstrap CSS & JS ---------->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    
+  <!-- D3.js -->
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  <!-- d3.js script -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
+    <!-- plotly -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+
+    <!-- iconography  i.e. <i class="fa fa-list-ol fa-5x"></i>-->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+    <!-- For Reveal JS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='dist/reset.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='dist/reveal.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='dist/theme/black.css') }}" id="theme">
+    <!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="{{ url_for('static',filename='plugin/highlight/monokai.css') }}" id="highlight-theme">
+
+    <!-- jquery & bootstrap.min.js & datatbles.net
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> -->
+    <!-- datatables.net CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"> -->
+
+    <!-- Custom styles for this template  / Includes map.css for Leaflet-->
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/menuStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bubbleChartStyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ChartRaceStyle.css') }}"> -->
+
+</head>
+<body>
+
+
+<!--main body starts here-->
+<!-- <main> -->
+
+  <!-- <div class="text-block">
+    <div class="container">
+      <div class="row">
+        <div id="myDiv"> -->
+            <div class="reveal">
+                <div class="slides">
+                  <section>
+                    <h1>Conclusions Sigma team</h1>
+                    <img src="{{ url_for('static',filename='images/Sigma.png') }}" alt="Team Sigma" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                    <p>
+                      <small>Created by <a href="/">Sigma Team</a> </small>
+                    </p>
+                  </section>  
+                  <section>
+                        <section>
+                          <p>
+                              Over the past decade there has been a clear dominance in the banking system by 4 main banks Bancomer now BBVA, Citibanamex, Santander and each year more aggressively local bank Banorte. 
+                          </p>
+                        </section>
+                        <section>
+                          <img src="{{ url_for('static',filename='images/conc1_3.jpeg') }}" alt="Team Sigma" style="background: transparent;">
+                        </section>
+                    </section>
+                    <section>
+                      <section>
+                        <p>
+                            As history goes until 2010 Citibanamex was the biggest bank in mexico until  BBVA (then Bancomer)  surpass it in 2011 and then in 2015 and 2017 Santander and Banorte respectively in general terms. It can be said that BBVA is the clear leader amongst the 4 biggest banks and the other 3 compete in different products for the second please but hold a similar portion of the market in general 
+                        </p>
+                      </section>
+                      <section>
+                        <img src="{{ url_for('static',filename='images/historygrowth.jpeg') }}" alt="Team Sigma" style="background: transparent;">
+                      </section>
+                        
+                    </section>
+                    <section>
+                      <p>
+                          Although there are banking licenses for more than 40 banks with the next tier of banks (Inbursa, HSBC, Scotia, Azteca, Bajio and Banregio) mexico concetratates 86% of its banking income in 10 banks (60% in the big 4)
+                      </p>
+                    </section>
+                    <section>
+                      <section>
+                        <p>
+                            Lending market has been decreasing mainly due to covid closings and credit tightening restrictions. It is clear that the international banks reduce their risk appetite with Citibanamex showing a 15%+ reduction YOY on their lending. Banorte and the other local banks such as Azteca and Bajio have grown during pandemic period 
+                        </p>
+                      </section>
+                      <section>
+                        <img src="{{ url_for('static',filename='images/lending.jpg') }}" alt="Team Sigma" style="background: transparent;">
+                      </section>
+                        
+                    </section>
+                    <section>
+                      <section>
+                        <p>
+                            In terms of deposits we also saw a higher than expected growth mainly due to closing of commercial activity that reduce the places for the general public to spend and reduce the investment for companies that preferred to maintain a long liquidity position
+                        </p>
+                      </section>
+                      <section>
+                        <img src="{{ url_for('static',filename='images/deposits.jpeg') }}" alt="Team Sigma" style="background: transparent;">
+                      </section>
+                        
+                    </section>
+                    <section>
+                      <section>
+                        <p>
+                          In terms of profitability 61% of revenues are produced in by the biggest four bank however they represent 77% of system EBIT as the spaniards and Banorte efficiency are much better than the system. Citibanamex does not follow the trend and with a 14% share in revenues only contributed with 8% of the Earnings before tax  
+                          
+                        </p>
+                      </section>
+                      <section>
+                        <img src="{{ url_for('static',filename='images/profitability.JPG') }}" alt="Team Sigma" style="background: transparent;">
+                      </section>
+                        
+                    </section>
+                    <section>
+                        <section>
+                          <h1>From ML fbprophet</h1>
+                          <img src="{{ url_for('static',filename='images/logo_prophet.svg') }}" alt="Team Sigma" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                        </section>
+                        <section>
+                            <p>
+                                The interesting part about the prophet projections is that banks can dimension the long term size of the market after a recovery period. Managing risk will determine which bank will gain the most market share after the economic cycle restarts and the growth path returns to Mexican market 
+                            </p>
+                            <img src="{{ url_for('static',filename='images/prophet2.jpeg') }}" alt="Team Sigma" style="background: transparent;">
+                        </section>
+                        <section>
+                            <p>
+                              For the prophet projections we use data from 2000 until 2018 to train the machine learning model. We use 2019 as a test determining that the model was in deed showing an accurate projection, none the less for 2020 in all trained models the behavior was far off from expectations, in Deposits for instance with a higher than expected growth and for lending there is a clear reversion on the growth trend showing an actual decrease YOY from April onwards. 
+                            </p>
+                        </section>
+                        <section>
+                          <img src="{{ url_for('static',filename='images/prophet1.jpeg') }}" alt="Team Sigma" style="background: transparent;">
+                        </section>
+                    </section>
+                    <section>
+                      <h3>Technologies Used</h3>
+                      <ul style="list-style-type:none;">
+                        <li>Python</li>
+                        <li>Jupyter Notebooks</li>
+                        <li>ML Algorithm - fpProphet</li>
+                        <li>JavaScript</li>
+                        <li>Flask</li>
+                        <li>AWS - RDS (PostgreSQL)</li>
+                        <li>JS - AJAX / D3 / Reveal</li>
+                        <li>Tableau</li>
+                        <li>HTML/CSS</li>
+                        <li>Heroku</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h1>Thanks!</h1>
+                      <img src="{{ url_for('static',filename='images/team.jpeg') }}" alt="Team Sigma" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                      <p>
+                        <small>Created by <a href="/">Sigma Team</a> </small>
+                      </p>
+                    </section>
+                </div>
+            </div> <!-- End of reveal js -->
+        </div>
+     <!-- </div>  end of row -->
+    <!--</div> end of container-->
+  <!--</div>  end of text block--->
+    
+<!-- </main> -->
+
+
+<!-- <script src="{{ url_for('static',filename='js/logic.js') }}"></script>
+<script src="{{ url_for('static',filename='js/chart-race.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bubble-chart.js') }}"></script> -->
+  <!-- From the Reveal JS library -->
+  <script src="{{ url_for('static',filename='dist/reveal.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/notes/notes.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/markdown/markdown.js') }}"></script>
+  <script src="{{ url_for('static',filename='plugin/highlight/highlight.js') }}"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      touch: true,
+      transition: "convex",
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+
+<!-- <footer >
+  <nav class="navbar fixed-bottom navbar-dark bg-dark p-2" style="color: white">Bootcamp March 2021</nav>
+</footer> -->
+</body>
+</html>

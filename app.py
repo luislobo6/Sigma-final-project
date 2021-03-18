@@ -108,6 +108,11 @@ def information_more(bank_concept):
     return json.dumps(test.to_json())
 
 
+@app.route("/conclusions")
+def conclusions():
+    
+    return render_template("conclusions.html")
+
 # Run Flask App
 if __name__ == "__main__":
     app.run(debug=True)
