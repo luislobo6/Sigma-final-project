@@ -6,43 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project Team Sigma</title>
     
-    <!------ Jquery ***Remember jquery must be first***---------->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    
-    <!------ Bootstrap CSS & JS ---------->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-    
-  <!-- D3.js -->
-  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-  <!-- d3.js script -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.0.0/d3.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
-    <!-- plotly -->
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
-
-    <!-- iconography  i.e. <i class="fa fa-list-ol fa-5x"></i>-->
-    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
     <!-- For Reveal JS -->
     <link rel="stylesheet" href="{{ url_for('static',filename='dist/reset.css') }}">
 		<link rel="stylesheet" href="{{ url_for('static',filename='dist/reveal.css') }}">
 		<link rel="stylesheet" href="{{ url_for('static',filename='dist/theme/black.css') }}" id="theme">
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/theme/league.css"> -->
+    
     <!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="{{ url_for('static',filename='plugin/highlight/monokai.css') }}" id="highlight-theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/zenburn.min.css"> -->
 
-    <!-- jquery & bootstrap.min.js & datatbles.net
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> -->
-    <!-- datatables.net CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"> -->
-
-    <!-- Custom styles for this template  / Includes map.css for Leaflet-->
-    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/menuStyle.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/bubbleChartStyle.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/ChartRaceStyle.css') }}"> -->
 
 </head>
 <body>
@@ -77,7 +55,7 @@
                     <section>
                       <section>
                         <p>
-                            As history goes until 2010 Citibanamex was the biggest bank in mexico until  BBVA (then Bancomer)  surpass it in 2011 and then in 2015 and 2017 Santander and Banorte respectively in general terms. It can be said that BBVA is the clear leader amongst the 4 biggest banks and the other 3 compete in different products for the second please but hold a similar portion of the market in general 
+                            As history goes until 2010 Citibanamex was the biggest bank in mexico until  BBVA (then Bancomer)  surpass it in 2011 and then in 2015 and 2017 Santander and Banorte respectively in general terms. It can be said that BBVA is the clear leader amongst the 4 biggest banks and the other 3 compete in different products for the second place but hold a similar portion of the market in general 
                         </p>
                       </section>
                       <section>
@@ -87,7 +65,7 @@
                     </section>
                     <section>
                       <p>
-                          Although there are banking licenses for more than 40 banks with the next tier of banks (Inbursa, HSBC, Scotia, Azteca, Bajio and Banregio) mexico concetratates 86% of its banking income in 10 banks (60% in the big 4)
+                          Although there are banking licenses for more than 40 banks with the next tier of banks (Inbursa, HSBC, Scotia, Azteca, Bajio and Banregio) Mexico concentrates 86% of its banking income in 10 banks (60% in the big 4)
                       </p>
                     </section>
                     <section>
@@ -176,15 +154,14 @@
 <!-- </main> -->
 
 
-<!-- <script src="{{ url_for('static',filename='js/logic.js') }}"></script>
-<script src="{{ url_for('static',filename='js/chart-race.js') }}"></script>
-<script src="{{ url_for('static',filename='js/bubble-chart.js') }}"></script> -->
   <!-- From the Reveal JS library -->
   <script src="{{ url_for('static',filename='dist/reveal.js') }}"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/headjs@1.0.3/dist/1.0.0/head.min.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/js/reveal.min.js"></script> -->
   <script src="{{ url_for('static',filename='plugin/notes/notes.js') }}"></script>
   <script src="{{ url_for('static',filename='plugin/markdown/markdown.js') }}"></script>
   <script src="{{ url_for('static',filename='plugin/highlight/highlight.js') }}"></script>
-  <script>
+  <script  defer>
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
     // - https://revealjs.com/config/
